@@ -56,29 +56,29 @@ const imagen=()=>{
 const registro = () =>{
   return(
     <View>
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'font-awesome', name: 'user' }}
       placeholder='Nombre Completo'
       />
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'font-awesome', name: 'calendar' }}
       placeholder='Fecha de nacimiento'
       />
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'material-icons', name: 'mail' }}
       placeholder='Email'
       />
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'font-awesome', name: 'lock' }}
       placeholder='Password'
       secureTextEntry={true}
       />
       <Text style={styles.texto}>Datos Bancarios</Text>
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'material-icons', name: 'mail' }}
       placeholder='Nombre del Titular'
       />
-      <Input style={styles.estiloinput}
+      <Input style={styles.estiloInput}
       leftIcon={{ type: 'material-icons', name: 'mail' }}
       placeholder='Número Tarjeta'
       />
@@ -163,15 +163,12 @@ const styles = StyleSheet.create({
   },
   estiloInput:{
     backgroundColor:'black',
-    borderBottomWidth : 3,
     borderBottomColor: 'white',
-    borderStyle: 'solid',
     color:'white',
     // marginTop:0,
     // marginLeft:0,
     // marginRight:0,
     // marginBottom:0,
-    width:500
   
   },
   upv:{
