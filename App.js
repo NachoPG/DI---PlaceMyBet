@@ -19,30 +19,9 @@ import {
   StatusBar,
 } from 'react-native';
 
-const nom = () => {
-  return (
-      <Text>PlaceMyBet</Text>
-  )
-}
-
-const estil = 'florida';
-const aplicarEstilo = (param) =>{
-  return(
-    param == 'florida'?styles.florida:styles.upv
-
-  )
-  
-}
-const aplicarColorLetra = (param2) =>{
-  return(
-    param2 == 'florida'?Input.placeholderTextColor=='white':Input.placeholderTextColor=='orange'
-  )
-  
-}
-
 const imagen=()=>{
   return(
-    <View>
+    <View style={styles.flexbox}>
       <Image
       style={styles.logo}
       source={{uri: 'https://i.postimg.cc/JnWFwm7H/PLACE-MYBET.png',}}
@@ -55,7 +34,7 @@ const imagen=()=>{
 
 const registro = () =>{
   return(
-    <View>
+    <View style={styles.flexboxFila}>
       <Input style={styles.estiloInput}
       leftIcon={{ type: 'font-awesome', name: 'user' }}
       placeholder='Nombre Completo'
@@ -89,29 +68,21 @@ const registro = () =>{
 
 const btnRegistrar = () =>{
   return(
-    <Button style={styles.btnRegistrar}
+    <Button 
+      style={styles.btnRegistrar}
       title="Registrarse"
+      type='solid'
     />
   )
 }
-
-const Separator = () => (
-  <View style={styles.separator} />
-);
-
-
 
 class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.fondo}>
-          <View style={styles.flexbox}>
           {imagen()}
-          </View>
-          <View style={styles.flexboxFila}>
           {registro()}
-          </View>
           <View>
             {btnRegistrar()}
           </View>
@@ -124,20 +95,17 @@ class App extends Component {
 const styles = StyleSheet.create({
   btnRegistrar:{
     borderColor:'white',
-    borderBottomWidth : 3,
-    width:'10em',
+    borderWidth:3,
+
   },
   texto:{
     fontFamily:'sans-serif',
+    fontWeight:'bold',
     fontSize:20,
     marginLeft:5,
     marginBottom:10,
   },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
+
   container:{
     // flex:1,
   },
