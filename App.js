@@ -62,16 +62,16 @@ const registro = () =>{
       placeholder='Número Tarjeta'
       />
     </View>
-    
   )
 }
 
 const btnRegistrar = () =>{
   return(
     <Button 
-      style={styles.btnRegistrar}
       title="Registrarse"
-      type='solid'
+      containerStyle={{width:200}}
+      buttonStyle={{backgroundColor:'black'}}
+      titleStyle={{color:'#F59A23',fontSize:20}}
     />
   )
 }
@@ -79,15 +79,17 @@ const btnRegistrar = () =>{
 class App extends Component {
   render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.fondo}>
-          {imagen()}
-          {registro()}
-          <View>
-            {btnRegistrar()}
+      <ScrollView>
+        <SafeAreaView style={styles.container}>
+          <View style={styles.fondo}>
+            {imagen()}
+            {registro()}
+            <View style={styles.btnRegistrar}>
+              {btnRegistrar()}
+            </View>
           </View>
-        </View>
-      </SafeAreaView>
+        </SafeAreaView>
+      </ScrollView>
     );
   }
 };
@@ -95,8 +97,9 @@ class App extends Component {
 const styles = StyleSheet.create({
   btnRegistrar:{
     borderColor:'white',
-    borderWidth:3,
-
+    borderWidth:1,
+    borderRadius:5,
+    alignSelf:'center',
   },
   texto:{
     fontFamily:'sans-serif',
